@@ -1,8 +1,10 @@
-# Front
+# Model Spotlight Website Created Using Firebase and Angular
+
+## Development server![model](https://github.com/user-attachments/assets/b0970b1d-6229-496f-a6e6-f129da6572f2)
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
 
-## Development server![model](https://github.com/user-attachments/assets/b0970b1d-6229-496f-a6e6-f129da6572f2)
 
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
