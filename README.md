@@ -3,6 +3,7 @@
 ## Development server![model](https://github.com/user-attachments/assets/b0970b1d-6229-496f-a6e6-f129da6572f2)
 ![image](https://github.com/user-attachments/assets/2ff862ed-2142-424d-96db-e06d7f40deb3)
 
+![image](https://github.com/user-attachments/assets/ef610ff4-b066-40e6-ace7-8b83accbe5eb)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
 
