@@ -1,0 +1,14 @@
+<div [routerLink]="['/post',postData.id]" class="body-text cursor-pointer" *ngIf="postCardData">
+    <div class="card max-w-sm rounded overflow-hidden shadow-lg">
+      <img class="w-full" [src]="imageUrl" alt="Sunset in the mountains">
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl text-left mb-2"> {{ postData.data.title }}</div>
+        <div class="body-text text-sm text-left text-red-900"> <small>{{ postData.data.createdAt.toMillis() | date: 'fullDate' }}</small>  </div>
+        <p class="text-gray-700 text-base text-left">
+            {{ postData.data.excerpt }}
+
+        </p>
+      </div>
+    </div>
+  </div>
+  

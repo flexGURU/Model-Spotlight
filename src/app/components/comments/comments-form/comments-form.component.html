@@ -1,0 +1,49 @@
+<div class="grid grid-cols-1">
+    <div>
+        <h3>Leave  a Comment</h3>
+    </div>
+
+    <div>
+        <form #commentData="ngForm" (ngSubmit)="commentData">
+            <div>
+                <textarea 
+                id="message" cols="30" rows="10"
+                 class="border-2 border-gray-700 block p-2.5  text-sm
+                  text-gray-900 bg-red-50 w-full md:w-1/2 " 
+                 placeholder="Leave a Comment here..."
+                 
+                 ></textarea>
+
+            </div>
+
+            <div class="flex space-x-2 mt-5">
+                <input 
+                type="text" 
+                placeholder="Enter your Name"
+                name="name"
+                ngModel
+                required
+                class="border-2 border-gray-700 block p-2.5  text-sm
+                text-gray-900 bg-red-50 "
+                >
+
+                <input type="email" placeholder="Enter your Email"
+                class="border-2 border-gray-700 block p-2.5  text-sm
+                text-gray-900 bg-red-50  ">
+            </div>
+
+            <div class="mt-2">
+                
+
+                <button class="w-3/4 md:w-auto button md:button">
+                    Add Comment
+                </button>
+                
+                
+                
+            </div>
+           
+
+        </form>
+    </div>
+</div>

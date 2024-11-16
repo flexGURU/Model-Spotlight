@@ -1,0 +1,65 @@
+<div class="flex justify-center items-center w-full">
+
+    <div class="flex flex-col items-start w-full max-w-md">
+        <div class="body-text mb-4">
+            <p class="text-sm text-left">Join our newsletter to stay up to date on features and releases</p>
+        </div>
+        <div *ngIf="hasSubscribed" class="p-2 m-2 border-green-900 bg-green-500 rounded-sm w-3/4 mx-auto">
+            <p class="body-text text-lg">
+                Thankyou for Subscribing
+            </p>
+
+        </div>
+      
+
+        <form class="w-full" #subscription="ngForm" (ngSubmit)=onSubmit(subscription.value) *ngIf="!hasSubscribed">
+
+            <div class="p-2">
+                <div *ngIf="isEmailerror" class="border-1 p-1 mb-1 rounded-sm border-red-800 bg-red-600 w-3/4 mx-auto animate-bounce">
+                    <p class="body-text text-lg">
+                    Email is already in use
+                    </p>
+                </div>
+
+                
+
+                <input 
+                    class="p-2 text-sm w-full text-gray-900 border border-gray-300 "
+                    type="email" 
+                    placeholder="Enter your Email"
+                    name="email"
+                    #email='ngModel'
+                    ngModel
+                    required
+             
+                >
+                <div class="" *ngIf="email.touched && email.invalid">
+
+                <div *ngIf="email.errors?.['required']"
+                    class="mt-1 border-2 border-red-500 rounded-lg w-3/4 mx-auto bg-red-700">
+                    <p class="p-1 body-text text-lg text-white">Email is required
+                    <i class="fa-solid fa-exclamation"></i>
+                    </p>
+                </div>
+
+                <div *ngIf="email.errors?.['email']"
+                        class="mt-1 border-2 border-red-500 rounded-lg w-3/4 mx-auto bg-red-700">
+                    <p class="body-text text-lg text-white">Please enter a valid email address</p>
+                </div>
+
+                </div>
+
+
+            </div>
+            <div class="mt-2">
+                <button 
+                    class="button"
+                    [disabled]="subscription.invalid"
+                >
+                    Subscribe
+                </button>
+            </div>
+        </form>
+    </div>
+
+</div>

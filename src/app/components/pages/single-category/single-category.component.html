@@ -1,0 +1,16 @@
+<div class="">
+    <div class="m-12">
+        <h1 class="text-gray-800"> {{ categoryName.category }} </h1>
+        <p>Discover the latest in fashion with our curated collection that defines elegance, boldness, and creativity.</p>
+    </div>
+
+    <div class="md:grid grid-cols-4  m-5">
+        <div class="m-5" *ngFor="let catData of categoryData">
+            <app-post-card [postCardData]="catData"></app-post-card>
+        </div>
+    
+        
+       
+
+    </div>
+</div>

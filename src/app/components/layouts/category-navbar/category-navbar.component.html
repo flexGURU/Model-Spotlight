@@ -1,0 +1,9 @@
+<nav class="w-full  mx-auto px-4">
+    <div class="flex justify-center items-center">
+      <ul class="text-gray-800 body-text text-sm flex flex-wrap justify-center space-x-8">
+        <li *ngFor="let category of categories" class="">
+          <a  [routerLink]="['/category', category.data.category,category.id]" class="hover:underline">{{ category.data.category }}</a>
+        </li>
+      </ul>
+    </div>
+  </nav>

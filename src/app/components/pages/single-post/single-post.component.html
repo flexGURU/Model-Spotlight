@@ -1,0 +1,64 @@
+<div class="" *ngIf="singlePostData">
+    <div class="m-8"> <h2>
+        {{singlePostData.category.category}}
+    </h2> </div>
+    <div class="grid grid-cols-12 m-8 gap-6">
+        
+        <div class="col-span-9 shadow-lg p-2">
+
+            <div>
+                    <img 
+                [src]=" postImgPath"
+                alt=""
+                class="w-3/4 h-3/4"
+                >
+                <div class="p-2">
+                    <div class="headings text-red-800 text-2xl"> {{singlePostData.title}} </div>
+                    <div class="rounded-b-md body-text text-sm shad p-2"> {{ singlePostData.createdAt.toMillis() | date}} </div>
+                    <div class="p-2">
+    
+                        <h3>
+                        {{ singlePostData.content }}
+    
+                        </h3> 
+                    </div>
+
+                </div>
+            
+            </div>
+         
+         </div>
+
+        <div class="hidden md:block col-span-3">
+
+            <div class="m-2" *ngFor="let post of similarPostData">
+                <app-post-card [postCardData]="post" ></app-post-card>
+            </div>
+            
+ 
+
+        </div> 
+
+    </div>
+
+    <div class="grid grid-cols-12 gap-6 m-6">
+        <div class="col-span-9" >
+            <app-comments-form></app-comments-form>
+        </div>
+        <div class="col-span-9">
+            <div class="">
+                <h2 class="m-3"> Comments </h2>
+        
+            </div>
+
+            <div class="">
+            <app-comments></app-comments>
+            <app-comments></app-comments>
+
+            </div>
+
+        </div>
+     
+    </div>
+    
+</div>

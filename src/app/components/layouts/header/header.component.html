@@ -1,0 +1,39 @@
+<div class="items-center bg-primary text-white p-5 flex justify-between border-b-4 border-red-600">
+    <div class="md:hidden">
+        <a href="">
+        <i class="fa-solid fa-list"></i>
+
+        </a>
+    </div>
+    <div></div>
+    <div class="m-5">
+        <h1>
+            <a 
+                routerLink="/home" 
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+            >
+                Model Spotlight
+            </a> 
+        </h1>
+        <p>Sasuke Uchiha</p>
+    </div>
+    <div class="hidden md:block">
+        
+          <ul class="flex justify-between space-x-10 text-sm items-center py-4">
+            <li><a href="/home" className="hover:underline">Home</a></li>
+            <li><a href="/about" className="hover:underline">About Me</a></li>
+            <li><a href="/contact" className="hover:underline">Contact</a></li>
+            <li><a href="/terms&conditions" className="hover:underline">Terms & Conditions</a></li>
+          </ul>
+        
+      </div>
+    
+    <div class="hidden md:block m-5">
+        
+        <div class="ml-8">
+            <button class="button" routerLink="/contact">Contact Me</button>
+        </div>
+        
+    </div>
+</div>
